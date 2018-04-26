@@ -18,12 +18,6 @@ knn <- function(k, x_i, points) {
     categories[j] <- points[j,]$l
   }
   
-  cc <- c()
-  for (i in 1:k) {
-    ix <- which.min(distances)
-    cc[i] <- categories[ix]
-    distances <- distances[-ix]
-    categories <- categories[-ix]
-  }
-  return(names(which.max(table(cc))))
+  cd <- data.frame(distances,categories)[order(distances),][1:k,]
+  return(names(sort(summary(as.factor(cd$categories)), decreasing=T)[1]))
 }
