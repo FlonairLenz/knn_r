@@ -1,2 +1,3 @@
 # k-Nearest-Neighbor-Algorithmus
-K-Nearest-Neighbor with R
+
+To improve machine learning algorithms I implemented the knn-Algorithm. 
