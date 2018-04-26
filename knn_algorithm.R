@@ -9,7 +9,7 @@ distance <- function(x_i, x_j) {
 
 knn <- function(k, x_i, points) {
   x_i <- as.numeric(x_i)
-  distances = c()
+  distances <- c()
   categories <- c()
   
   for (j in 1:nrow(points)) {
